@@ -149,11 +149,8 @@ This project was created as part of the "LLM Engineering: Master AI and Large La
 - Prompt engineering for data generation tasks
 - Creating production-ready Python applications
 
-This is one of several hands-on projects I completed while learning LLM engineering concepts including RAG systems, AI agents, and prompt optimization.
-
 ## Acknowledgments
 
 - Course: [LLM Engineering: Master AI and Large Language Models](https://www.udemy.com/course/llm-engineering-master-ai-and-large-language-models/) by Ed Donner
 - Built with [OpenAI API](https://openai.com)
 - UI powered by [Gradio](https://gradio.app)
-- Part of my LLM Engineering learning journey
