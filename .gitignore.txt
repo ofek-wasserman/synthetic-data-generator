@@ -1,0 +1,32 @@
+# Environment variables (NEVER upload these!)
+.env
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Generated output files
+output/*.json
+output/*.csv
+output/*.txt
+
+# Keep the output folder itself
+!output/.gitkeep
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Virtual environment
+venv/
+env/
