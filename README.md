@@ -68,7 +68,7 @@ pip install -r requirements.txt
 
 Run the main Python script:
 ```bash
-python src/data_generator.py
+python src/synthetic_data_generator.py
 ```
 
 This will:
@@ -95,16 +95,16 @@ Example 2: Customer Data
 
 ```
 synthetic-data-generator/
-├── src/                    # Source code
-│   └── data_generator.py   # Main application script
-├── notebooks/              # Jupyter notebooks
-│   └── data_generator_notebook.ipynb
-├── output/                 # Generated datasets saved here
-├── screenshots/            # Demo images
-├── .env.example            # Example environment variables
-├── .gitignore             # Files to ignore in Git
-├── requirements.txt        # Python dependencies
-└── README.md              # This file
+├── src/                    		# Source code
+│   └── synthetic_data_generator.py	# Main application script
+├── notebooks/              		# Jupyter notebooks
+│   └── synthetic_data_generator_notebook.ipynb
+├── output/                 		# Generated datasets saved here
+├── screenshots/            		# Demo images
+├── .env.example            		# Example environment variables
+├── .gitignore             		# Files to ignore in Git
+├── requirements.txt        		# Python dependencies
+└── README.md              		# This file
 ```
 
 ## Important Notes
@@ -117,7 +117,7 @@ synthetic-data-generator/
 ## Troubleshooting
 
 ### OpenAI API Key not set error
-- Make sure the .env file exists in the project root
+- Make sure .env file exists in the project root
 - Check that OPENAI_API_KEY is spelled correctly
 - Verify your API key is valid
 
@@ -128,7 +128,7 @@ synthetic-data-generator/
 ### Web interface doesn't open
 - Check if port 7860 is already in use
 - Try closing other applications
-- Look at the terminal for error messages
+- Look at terminal for error messages
 
 ## License
 
@@ -142,16 +142,18 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## About This Project
 
-This project was created as part of the "LLM Engineering: Master AI and Large Language Models" course by Ed Donner on Udemy. It demonstrates the practical application of:
+This project was created as part of the "LLM Engineering: Master AI and Large Language Models" course by Ed Donner on Udemy. It demonstrates practical application of:
 - Working with LLM APIs (OpenAI GPT-4)
 - Building user interfaces for AI tools with Gradio
 - Handling API keys securely with environment variables
 - Prompt engineering for data generation tasks
 - Creating production-ready Python applications
 
+This is one of several hands-on projects I completed while learning LLM engineering concepts including RAG systems, AI agents, and prompt optimization.
 
 ## Acknowledgments
 
 - Course: [LLM Engineering: Master AI and Large Language Models](https://www.udemy.com/course/llm-engineering-master-ai-and-large-language-models/) by Ed Donner
 - Built with [OpenAI API](https://openai.com)
 - UI powered by [Gradio](https://gradio.app)
+- Part of my LLM Engineering learning journey
