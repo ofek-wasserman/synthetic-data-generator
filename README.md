@@ -101,7 +101,6 @@ Example 2: Customer Data
 synthetic-data-generator/
 ├── synthetic_data_generator.py	    # Main application script
 ├── output/                 		# Generated datasets saved here
-
 ├── .env.example            		# Example environment variables
 ├── .gitignore             		    # Files to ignore in Git
 ├── requirements.txt        		# Python dependencies
