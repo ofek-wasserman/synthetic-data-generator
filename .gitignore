@@ -11,6 +11,7 @@ __pycache__/
 .ipynb_checkpoints/
 
 # Generated output files
+synthetic_datasets/
 output/*.json
 output/*.csv
 output/*.txt
@@ -28,5 +29,8 @@ output/*.txt
 Thumbs.db
 
 # Virtual environment
+.venv/
 venv/
+ENV/
 env/
+.virtualenv/

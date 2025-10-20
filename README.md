@@ -36,19 +36,20 @@ Before you start, you need:
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/ofek-wasserman/synthetic-data-generator.git
-cd synthetic-data-generator
+git clone https://github.com/ofek-wasserman/<project-name>.git
+cd <project-name>
 ```
 
-### Step 2: Create Virtual Environment (Optional but Recommended)
+### Step 2: Create Virtual Environment
 ```bash
-# On Mac/Linux:
-python3 -m venv venv
-source venv/bin/activate
+# Create virtual environment
+python3 -m venv .venv
 
-# On Windows:
-python -m venv venv
-venv\Scripts\activate
+# Activate it
+source .venv/bin/activate  # On Mac/Linux
+# .venv\Scripts\activate   # On Windows
+
+# You should see (.venv) in your terminal prompt
 ```
 
 ### Step 3: Install Dependencies
@@ -57,18 +58,21 @@ pip install -r requirements.txt
 ```
 
 ### Step 4: Set Up Environment Variables
-1. Copy the example environment file and rename it to .env
-2. Open the .env file in a text editor
-3. Replace your_openai_api_key_here with your actual OpenAI API key
-4. Save the file
+1. Copy `.env.example` to `.env`
+```bash
+   cp .env.example .env
+```
+2. Edit `.env` and add your API key(s)
 
 ## Usage
 
-### Using the Script (Recommended)
-
-Run the main Python script:
+### Run the Application
 ```bash
-python src/synthetic_data_generator.py
+# Make sure virtual environment is activated
+source .venv/bin/activate  # If not already active
+
+# Run the app
+python .py
 ```
 
 This will:
@@ -95,16 +99,19 @@ Example 2: Customer Data
 
 ```
 synthetic-data-generator/
-├── src/                    		# Source code
-│   └── synthetic_data_generator.py	# Main application script
-├── notebooks/              		# Jupyter notebooks
-│   └── synthetic_data_generator_notebook.ipynb
+├── synthetic_data_generator.py	    # Main application script
 ├── output/                 		# Generated datasets saved here
-├── screenshots/            		# Demo images
+
 ├── .env.example            		# Example environment variables
-├── .gitignore             		# Files to ignore in Git
+├── .gitignore             		    # Files to ignore in Git
 ├── requirements.txt        		# Python dependencies
-└── README.md              		# This file
+├── .venv/                          # Virtual environment (gitignored)
+├── screenshots/            		# Demo images
+    ├── ui-interface-filled.png
+    ├── generation-success.png
+    ├── json-sample-output.png
+    └── ui-interface-deafult.png
+└── README.md              		    # This file
 ```
 
 ## Important Notes
@@ -117,18 +124,26 @@ synthetic-data-generator/
 ## Troubleshooting
 
 ### OpenAI API Key not set error
-- Make sure .env file exists in the project root
+- Make sure the .env file exists in the project root
 - Check that OPENAI_API_KEY is spelled correctly
 - Verify your API key is valid
 
-### Module not found error
-- Run pip install -r requirements.txt again
+### "Module not found" error
+- Make sure virtual environment is activated: `source .venv/bin/activate`
+- Run `pip install -r requirements.txt` again
 - Make sure you're using Python 3.11+
+- Check that you're in the project directory
+
+### Virtual environment issues
+- To deactivate: `deactivate`
+- To reactivate: `source .venv/bin/activate`
+- If `.venv/` is corrupted, delete it and recreate: `python3 -m venv .venv`
+- Make sure you activated venv before installing packages
 
 ### Web interface doesn't open
 - Check if port 7860 is already in use
 - Try closing other applications
-- Look at terminal for error messages
+- Look at the terminal for error messages
 
 ## License
 
@@ -142,18 +157,15 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## About This Project
 
-This project was created as part of the "LLM Engineering: Master AI and Large Language Models" course by Ed Donner on Udemy. It demonstrates practical application of:
+This project was created as part of the "LLM Engineering: Master AI and Large Language Models" course by Ed Donner on Udemy. It demonstrates the practical application of:
 - Working with LLM APIs (OpenAI GPT-4)
 - Building user interfaces for AI tools with Gradio
 - Handling API keys securely with environment variables
 - Prompt engineering for data generation tasks
 - Creating production-ready Python applications
 
-This is one of several hands-on projects I completed while learning LLM engineering concepts including RAG systems, AI agents, and prompt optimization.
-
 ## Acknowledgments
 
 - Course: [LLM Engineering: Master AI and Large Language Models](https://www.udemy.com/course/llm-engineering-master-ai-and-large-language-models/) by Ed Donner
 - Built with [OpenAI API](https://openai.com)
 - UI powered by [Gradio](https://gradio.app)
-- Part of my LLM Engineering learning journey
